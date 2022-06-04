@@ -9,19 +9,19 @@ import axios from "axios";
 
 const Cards = () => {
   const [data, Setdata] = useState([]);
-
+ 
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
       .then(function (response) {
-        console.log(response.data);
+   
         Setdata(response.data);
       })
       .catch(function (error) {
         console.error(error);
       });
   }, []);
-  // console.log(data);
+  
 
   const dispatch = useDispatch();
 
@@ -54,20 +54,22 @@ const Cards = () => {
                   <Card.Text>Price: ${element.price} </Card.Text>{" "}
                   <div className="button_div d-flex justify-content-center">
                     <Button
+                
                       variant="primary"
                       onClick={() => send(element)}
                       className="col-lg-12"
                     >
-                      {" "}
+                      
                       Add to Cart
                     </Button>
+                   
                   </div>
                 </Card.Body>
-              </Card>{" "}
+              </Card>
             </>
           );
         })}
-      </div>{" "}
+      </div>
     </div>
   );
 };
