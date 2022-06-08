@@ -106,7 +106,7 @@ const Header = () => {
                 <thead>
                   <tr>
                     <th>Photo</th>
-                    <th>Restaurant Name</th>
+                    <th>products Name</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -117,16 +117,16 @@ const Header = () => {
                           <td>
                             <NavLink to={`/cart/${e.id}`} onClick={handleClose}>
                               <img
-                                src={e.image}
+                                src={e.img}
                                 style={{width: "5rem", height: "5rem"}}
                                 alt=""
                               />
                             </NavLink>
                           </td>
                           <td>
-                            <p>{e.name}</p>
+                            <p>{e.title}</p>
                             <p>Price : ${e.price}</p>
-                            <p>Quantity : {e.qnty}</p>
+                            
                             <p
                               style={{
                                 color: "red",
@@ -154,7 +154,7 @@ const Header = () => {
                       </>
                     );
                   })}
-                  <p className="text-center">Total :$ {price}</p>
+                  <p className="text-center">Total:$ {price}</p>
                 </tbody>
               </Table>
             </div>

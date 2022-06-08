@@ -57,8 +57,9 @@ const CardsDetails = () => {
               return (
                 <>
                   <div key={id} className="items_img">
-                    <img  src={ele.image} alt="" />
+                    <img  src={ele.img} alt="" />
                   </div>
+                  
 
                   <div className="details">
                     <Table>
@@ -66,7 +67,7 @@ const CardsDetails = () => {
                         <td>
                           <p>
                             {" "}
-                            <strong>Restaurant</strong> : {ele.title}
+                            <strong>product</strong> : {ele.title}
                           </p>
                           <p>
                             {" "}
@@ -111,7 +112,7 @@ const CardsDetails = () => {
                         <td>
                           <p>
                             <strong>Rating:</strong>{" "}
-                            <span
+                             <span
                               style={{
                                 background: "green",
                                 color: "#fff",
@@ -119,12 +120,12 @@ const CardsDetails = () => {
                                 borderRadius: "5px",
                               }}
                             >
-                              {ele.rating.rate} ★{" "}
-                            </span>
+                              {ele.rating} ★{" "}
+                            </span> 
                           </p>
                           <p>
-                            <strong>Order Review :</strong>{" "}
-                            <span>{ele.rating.count}</span>
+                             <strong>Order Review :</strong>
+                            <span>{ele.rating}</span> 
                           </p>
                           <p>
                             <strong>Remove :</strong>{" "}

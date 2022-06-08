@@ -12,7 +12,7 @@ const Cards = () => {
  
   useEffect(() => {
     axios
-      .get("https://fakestoreapi.com/products")
+      .get("https://my-app-shopping.herokuapp.com/Stuffed_Animals")
       .then(function (response) {
    
         Setdata(response.data);
@@ -45,7 +45,7 @@ const Cards = () => {
               >
                 <Card.Img
                   variant="top"
-                  src={element.image}
+                  src={element.img}
                   style={{height: "16rem"}}
                   className="mt-3"
                 />

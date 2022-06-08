@@ -7,10 +7,16 @@ import {Routes, Route} from "react-router-dom";
 
 import { useContext } from 'react'
   import { themeContext } from './Context'
-import Data from "./Components2/Data";
+import Data from "./Card-Data/fitness products/Data";
+import Dataa from "./Card-Data/body products/Data";
 function App() {
+  
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
+  
+    
+
+      
   return (
     <div   style={{
       background: darkMode ? 'black' : '',
@@ -22,7 +28,10 @@ function App() {
         <Route path="/" element={<Cards />} />
         <Route path="/cart/:id" element={<CardsDetails />} />
       </Routes>
-   <Data/>
+      <Data/>
+      <Dataa/>
+
+     
     </div>
   );
 }

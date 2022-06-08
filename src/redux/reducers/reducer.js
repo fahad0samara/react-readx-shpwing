@@ -8,21 +8,30 @@ export const cartreducer = (state = INIT_STATE, action) => {
         case "ADD_CART":
 
             const IteamIndex = state.carts.findIndex((iteam) => iteam.id === action.payload.id);
+            console.log(IteamIndex);
 
             if (IteamIndex >= 0) {
                 state.carts[IteamIndex].qnty += 1
                 return {
+
                     ...state,
-                    carts: [...state.carts]
+                    carts: [...state.carts],
 
                 }
+
+
+
             } else {
                 const temp = {...action.payload, qnty: 1 }
                 return {
                     ...state,
-                    carts: [...state.carts, temp]
+                    carts: [...state.carts, temp],
+
+
+
 
                 }
+
             }
 
 
